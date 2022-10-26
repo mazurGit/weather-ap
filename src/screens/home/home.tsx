@@ -6,9 +6,7 @@ import { HttpUrlPath } from '~/common/enums/enums';
 
 const Home: FC = () => {
   useEffect(() => {
-    weatherServices.getWeather({
-      q: 'London'
-    })
+    weatherServices.getWeather()
     .then(res => console.log(res))
   },[])
 
