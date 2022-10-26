@@ -1,8 +1,17 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import {ScreenWrapper, ScrollView} from '~/components/components';
 import {DayWeatherSegment, MainInfo} from './components/components';
+import {weatherServices} from '~/services/services';
+import { HttpUrlPath } from '~/common/enums/enums';
 
 const Home: FC = () => {
+  useEffect(() => {
+    weatherServices.getWeather({
+      q: 'London'
+    })
+    .then(res => console.log(res))
+  },[])
+
   return (
     <ScreenWrapper>
       <ScrollView>
