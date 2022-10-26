@@ -1,10 +1,21 @@
 import React, {FC} from 'react';
-import {View, Text, ScreenWrapper} from '~/components/components';
+import {ScreenWrapper, ScrollView} from '~/components/components';
+import {DayWeatherSegment, MainInfo} from './components/components';
 
 const Home: FC = () => {
   return (
     <ScreenWrapper>
-      <Text>Home screen</Text>
+      <ScrollView>
+        <MainInfo/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+        <DayWeatherSegment contentContainerStyle={{marginTop: 10}}/>
+      </ScrollView>
     </ScreenWrapper>
   );
 };
