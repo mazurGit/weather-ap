@@ -1,12 +1,18 @@
-import React from "react";
+import React, {FC} from "react";
 import {View, Text, Image, LinearGradient} from "~/components/components";
+import {StyleProp, ViewStyle} from "react-native";
 import {images} from "~/assets/asset";
 import {styles} from "./styles";
-import { colors } from "~/common/constants/constants";
+import {colors} from "~/common/constants/constants";
 
-const DayWeatherSegment = () =>{
+
+type Props = {
+  contentContainerStyle?: StyleProp<ViewStyle>;
+}
+
+const DayWeatherSegment:FC<Props> = ({contentContainerStyle}) =>{
   return(
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, contentContainerStyle]}>
       <Text style={styles.text} >Today</Text>
       <Image source={images.cloud} style={styles.image}/>
       <View style={styles.temperatureWrapper}>

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: colors.white,
     ...SHADOW_STYLE.boxShadow,
-    width: '80%',
+    width: '90%',
   },
   image: {
     width: 50,
