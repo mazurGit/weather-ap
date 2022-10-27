@@ -1,13 +1,14 @@
 import {makeAutoObservable} from "mobx";
 import {weatherServices} from '~/services/services';
 import {ParsedCurrentDto, ParsedForecastDto} from '~/common/types/types';
+import {initialCurrentForecastDay, initialCurrentWeather} from './common/initial-state-values';
 import {DataStatus} from '~/common/enums/enums';
 
 class WeatherStore {
-  currentWeather: ParsedCurrentDto | {} = {};
+  currentWeather: ParsedCurrentDto = initialCurrentWeather;
   forecast: ParsedForecastDto[] | [] = [];
   dataStatus:DataStatus = DataStatus.IDLE;
-  currentForecastDay: ParsedForecastDto | {} = {}
+  currentForecastDay: ParsedForecastDto = initialCurrentForecastDay;
 
   constructor (){
     this.getWeather = this.getWeather.bind(this)
@@ -25,7 +26,7 @@ class WeatherStore {
     const currentForecast = this.forecast.find(day => day.id === id)
     this.currentForecastDay = currentForecast
       ? currentForecast
-      : {}
+      : initialCurrentForecastDay
   }
   async getWeather() {
     this.updateStatus(DataStatus.PENDING)

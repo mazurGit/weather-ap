@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   wrapper: {
     alignSelf: 'center',
     alignItems: 'center',
-    height: 300,
+    height: 400,
   },
   mainText: {
     fontSize: 30,
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     resizeMode: 'contain',
+  },
+  hoursList: {
+    marginTop: 70,
   },
 })
 

@@ -1,10 +1,16 @@
-import {HourWeather} from './hour-weather';
+type ParsedHourWeather = {
+  time: Date;
+  temperature: string;
+  iconUrl: string;
+  condition: string;
+}
 
 type ParsedCurrentDto = {
   city: string;
   condition: string;
   iconUrl: string;
   temperature: string;
+  hours: ParsedHourWeather[],
 }
 
 type ParsedForecastDto = {
@@ -20,8 +26,8 @@ type ParsedForecastDto = {
   wind: string;
   condition: string;
   iconUrl: string;
-  hours: HourWeather[];
+  hours: ParsedHourWeather[];
   avgTemp: string;
 }
 
-export type{ParsedCurrentDto, ParsedForecastDto};
+export type{ParsedCurrentDto, ParsedForecastDto, ParsedHourWeather};

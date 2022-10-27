@@ -3,10 +3,12 @@ import { colors } from "~/common/constants/colors";
 import {SHADOW_STYLE} from "~/styles/styles";
 
 const styles = StyleSheet.create({
+  screenWrapper: {
+    paddingHorizontal: 20,
+  },
   infoWrapper: {
     alignSelf: 'center',
-    width: '90%',
-    marginTop: 100,
+    width: '99%',
     paddingHorizontal: 10,
     paddingVertical: 10,
     borderWidth:1,

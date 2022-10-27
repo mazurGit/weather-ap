@@ -8,5 +8,6 @@ export {
   TouchableOpacity,
   FlatList,
 } from 'react-native';
-export {ScreenWrapper} from './screen-wrapper/screen-wrapper';
 export  {LinearGradient} from 'expo-linear-gradient';
+export {ScreenWrapper} from './screen-wrapper/screen-wrapper';
+export {HourTemperatureBar} from './hour-temperature-bar/hour-temperature-bar'
