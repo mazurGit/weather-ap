@@ -15,6 +15,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
   },
+  image: {
+    width: 70,
+    height: 70,
+    resizeMode: 'contain',
+  },
 })
 
 export {styles};
