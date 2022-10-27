@@ -12,7 +12,7 @@ const WeatherParameter:FC<Props> = ({title, value, contentContainerStyle}) => {
   return(
     <View style={[styles.wrapper, contentContainerStyle]}>
       <Text style={styles.text} >{title}</Text>
-      <Text style={styles.text}>{value}</Text>
+      <Text style={[styles.text, styles.textValue]}>{value}</Text>
     </View>
   )
 };

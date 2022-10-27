@@ -4,8 +4,9 @@ import {SHADOW_STYLE, FONT_STYLES} from "~/styles/styles";
 
 const styles = StyleSheet.create({
   wrapper:{
+    paddingHorizontal: 10,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 4,
@@ -14,12 +15,14 @@ const styles = StyleSheet.create({
     width: '90%',
   },
   image: {
-    width: 50,
-    height: 50,
+    alignSelf: 'center',
+    width: 40,
+    height: 40,
     resizeMode: 'contain',
   },
   temperatureWrapper:{
     flexDirection: 'row',
+    width: '45%'
   },
   bar:{
     width: 40,
@@ -30,11 +33,18 @@ const styles = StyleSheet.create({
   text:{
     fontSize: 18,
   },
+  title:{
+    width: '30%',
+  },
   minTemp: {
     color: colors.blue,
+    textAlign: 'right',
+    flex: 1,
   },
   maxTemp: {
-    color: colors.red
+    color: colors.red,
+    textAlign: 'right',
+    flex: 1,
   },
 })
 

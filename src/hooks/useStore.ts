@@ -1,4 +1,4 @@
-import {useContext} from '~/hooks/hooks';
+import {useContext} from 'react';
 import {StoreContext, store} from '~/store/store';
 import {Store} from '~/common/types/store';
 

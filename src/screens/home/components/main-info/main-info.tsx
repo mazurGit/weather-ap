@@ -9,14 +9,14 @@ type Props = {
 const MainInfo:FC<Props> = ({data}) => {
 
   if('city' in data) {
-    const {city, condition, temperature, icon} = data
+    const {city, condition, temperature, iconUrl} = data
 
     return(
       <View style={styles.wrapper}>
         <Text style={styles.mainText} >{city}</Text>
         <Text style={styles.mainText} >{temperature}</Text>
         <Text style={styles.secondaryText} >{condition}</Text>
-        <Image source={{uri: icon}} style={styles.image}/>
+        <Image source={{uri: iconUrl}} style={styles.image}/>
       </View>
     )
   }

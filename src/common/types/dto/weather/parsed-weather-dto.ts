@@ -3,14 +3,15 @@ import {HourWeather} from './hour-weather';
 type ParsedCurrentDto = {
   city: string;
   condition: string;
-  icon: string;
+  iconUrl: string;
   temperature: string;
 }
 
 type ParsedForecastDto = {
+  id: string,
   sunRise: number;
   sunSet: number;
-  date: string;
+  date: Date;
   maxTemp: string;
   minTemp: string;
   rainChance: string;
@@ -18,8 +19,9 @@ type ParsedForecastDto = {
   humidity: string;
   wind: string;
   condition: string;
-  icon: string;
+  iconUrl: string;
   hours: HourWeather[];
+  avgTemp: string;
 }
 
 export type{ParsedCurrentDto, ParsedForecastDto};
