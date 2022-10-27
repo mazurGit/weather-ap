@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 18,
     color: colors.textSecondary
+  },
+  textValue: {
+    flex: 0.5
   }
 });
 
