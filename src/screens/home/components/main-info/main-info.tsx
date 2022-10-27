@@ -1,7 +1,7 @@
 import React,{FC} from "react";
-import {Image, Text, View} from '~/components/components';
+import {Image, Text, View, FlatList, HourTemperatureBar} from '~/components/components';
 import {styles} from "./styles";
-import {ParsedCurrentDto} from "~/common/types/types";
+import {ParsedHourWeather, ParsedCurrentDto} from "~/common/types/types";
 
 type Props = {
   data: ParsedCurrentDto | {}
@@ -9,7 +9,7 @@ type Props = {
 const MainInfo:FC<Props> = ({data}) => {
 
   if('city' in data) {
-    const {city, condition, temperature, iconUrl} = data
+    const {city, condition, temperature, iconUrl, hours} = data
 
     return(
       <View style={styles.wrapper}>
@@ -17,6 +17,7 @@ const MainInfo:FC<Props> = ({data}) => {
         <Text style={styles.mainText} >{temperature}</Text>
         <Text style={styles.secondaryText} >{condition}</Text>
         <Image source={{uri: iconUrl}} style={styles.image}/>
+        <HourTemperatureBar data={hours} contentContainerStyle={styles.hoursList}/>
       </View>
     )
   }

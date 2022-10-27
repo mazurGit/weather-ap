@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import { observer } from "mobx-react-lite"
-import {ScreenWrapper, FlatList} from '~/components/components';
+import {ScreenWrapper, FlatList, View} from '~/components/components';
 import {DayWeatherSegment, MainInfo} from './components/components';
 import {useStore, useEffect} from '~/hooks/hooks';
 import {DataStatus} from '~/common/enums/data-status';
 import {ParsedForecastDto} from '~/common/types/types';
-
+import {styles} from './styles';
 
 const Home: FC = observer(() => {
   const {weather:{currentWeather, dataStatus, getWeather, forecast}} = useStore();
@@ -22,15 +22,17 @@ const Home: FC = observer(() => {
 
   return (
     <ScreenWrapper>
+      <View style={styles.wrapper}>
       {isLoaded && (
-      <FlatList
-        showsHorizontalScrollIndicator={false}
-        ListHeaderComponent={() => <MainInfo data={currentWeather}/>}
-        data={forecast}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-      />
-      )}
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          ListHeaderComponent={() => <MainInfo data={currentWeather}/>}
+          data={forecast}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
+        )}
+       </View>
     </ScreenWrapper>
   );
 });

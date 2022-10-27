@@ -6,6 +6,8 @@ const colors = {
   red: '#ff0000',
   text: '#000000',
   textSecondary: '#6A6C6D',
+  textMinTemp: '#3590ae',
+  textMaxTemp: '#000000',
   black: '#000000',
 };
 

@@ -2,12 +2,6 @@ import {ParsedCurrentDto, ParsedForecastDto, WeatherDto} from "~/common/types/ty
 import uuid from 'react-native-uuid';
 
 const parseDtoObject = (obj:WeatherDto):[ParsedCurrentDto, ParsedForecastDto[]] => {
-  const current = {
-    city: obj.location.name,
-    condition: obj.current.condition.text,
-    iconUrl: `https:${obj.current.condition.icon}`,
-    temperature: `${Math.round(obj.current.temp_c)}°C`
-  }
   const forecast = obj.forecast.forecastday.map(item => {
     return {
       id: String(uuid.v4()),
@@ -22,10 +16,23 @@ const parseDtoObject = (obj:WeatherDto):[ParsedCurrentDto, ParsedForecastDto[]] 
       wind: `${Math.round(item.day.maxwind_kph)} km/h`,
       condition: item.day.condition.text,
       iconUrl: `https:${item.day.condition.icon}`,
-      hours: item.hour,
+      hours: item.hour.map(({time, temp_c, condition:{icon, text}}) => ({
+        time: new Date(time.replace(' ', 'T')),
+        temperature: `${Math.round(temp_c)}°C`,
+        iconUrl: `https:${icon}`,
+        condition: text,
+      })),
       avgTemp: `${Math.round((item.day.maxtemp_c + item.day.mintemp_c)/2)}°C`
     }
   })
+
+  const current = {
+    city: obj.location.name,
+    condition: obj.current.condition.text,
+    iconUrl: `https:${obj.current.condition.icon}`,
+    temperature: `${Math.round(obj.current.temp_c)}°`,
+    hours: [...forecast[0].hours],
+  }
 
   return [current, forecast]
 }

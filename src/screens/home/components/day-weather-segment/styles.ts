@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: colors.white,
     ...SHADOW_STYLE.boxShadow,
-    width: '90%',
+    width: '99%',
   },
   image: {
     alignSelf: 'center',
@@ -34,15 +34,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   title:{
-    width: '30%',
+    width: '33%',
   },
   minTemp: {
-    color: colors.blue,
+    color: colors.textMinTemp,
     textAlign: 'right',
     flex: 1,
   },
   maxTemp: {
-    color: colors.red,
+    color: colors.textMaxTemp,
     textAlign: 'right',
     flex: 1,
   },

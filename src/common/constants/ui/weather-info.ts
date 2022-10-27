@@ -1,12 +1,8 @@
-import { ParsedForecastDto } from "~/common/types/types"
+import {KeyWeatherInfo} from "~/common/types/types"
 
-type Key = {
-  name: keyof ParsedForecastDto;
-  value: string;
-}
-const weatherInfo: Key[]  = [
+const weatherInfo: KeyWeatherInfo[]  = [
   {name: 'sunRise', value: 'Sunrise'},
-  {name: 'sunSet', value: 'Sunrise'},
+  {name: 'sunSet', value: 'Sunset'},
   {name: 'wind', value: 'Wind'},
   {name: 'humidity', value: 'Humidity'},
   {name: 'maxTemp', value: 'Max.temperature'},
