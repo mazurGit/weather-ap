@@ -24,7 +24,6 @@ class HttpServices {
 
     const headers = this.getHeaders();
     const completeUrl = `${this.getUrl(url, params)}`;
-    console.log(completeUrl)
     const response = await fetch(completeUrl, {
       headers: headers,
       method,

@@ -3,8 +3,8 @@ import {colors} from '~/common/constants/colors';
 const SHADOW_STYLE = {
   boxShadow: {
     shadowOffset: {
-      width: 3,
-      height: -3,
+      width: 1,
+      height: -1,
     },
     shadowOpacity: 0.1,
     shadowRadius: 3,
