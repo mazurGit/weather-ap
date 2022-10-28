@@ -11,3 +11,4 @@ export {
 export  {LinearGradient} from 'expo-linear-gradient';
 export {ScreenWrapper} from './screen-wrapper/screen-wrapper';
 export {HourTemperatureBar} from './hour-temperature-bar/hour-temperature-bar'
+export {Spinner} from './spinner/spinner';
