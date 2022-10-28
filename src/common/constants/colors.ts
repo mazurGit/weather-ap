@@ -9,6 +9,8 @@ const colors = {
   textMinTemp: '#3590ae',
   textMaxTemp: '#000000',
   black: '#000000',
+  background: '#E6FFFF',
+  boxesBackground: 'ds',
 };
 
 export {colors};
