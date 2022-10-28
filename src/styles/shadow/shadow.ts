@@ -1,4 +1,3 @@
-import {colors} from '~/common/constants/colors';
 
 const SHADOW_STYLE = {
   boxShadow: {

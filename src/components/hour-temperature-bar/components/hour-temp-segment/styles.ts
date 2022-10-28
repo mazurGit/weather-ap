@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
     width: 40,
   },
   icon: {
-    width: 30,
-    height: 30,
+    width: 50,
+    height: 50,
     resizeMode: 'contain'
   },
   text: {
