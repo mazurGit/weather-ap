@@ -1,5 +1,6 @@
 import {StyleSheet} from "react-native";
 import {colors} from "~/common/constants/colors";
+import {FONT_STYLES} from "~/styles/styles";
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -8,6 +9,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   text: {
+    ...FONT_STYLES.fontWeightMedium,
     flex: 1,
     fontSize: 18,
     color: colors.textSecondary

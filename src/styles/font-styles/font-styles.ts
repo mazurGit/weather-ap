@@ -1,18 +1,18 @@
 const FONT_STYLES = {
   fontWeightRegular: {
-    fontWeight: '400',
-  },
-  fontWeightMedium: {
-    fontWeight: '500',
-  },
-  fontWeightSemiBold: {
-    fontWeight: '600',
+    fontFamily: 'Inter-Regular',
   },
   fontWeightBold: {
-    fontWeight: '700',
+    fontFamily: 'Inter-Bold',
   },
   fontWeightExtraBold: {
-    fontWeight: '800',
+    fontFamily: 'Inter-ExtraBold',
+  },
+  fontWeightSemiBold: {
+    fontFamily: 'Inter-SemiBold',
+  },
+  fontWeightMedium: {
+    fontFamily: 'Inter-Medium',
   },
 };
 

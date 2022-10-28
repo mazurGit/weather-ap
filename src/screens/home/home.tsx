@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
-import { observer } from "mobx-react-lite"
-import {ScreenWrapper, FlatList, View} from '~/components/components';
+import {observer} from "mobx-react-lite"
+import {useMemo} from 'react';
+import {ScreenWrapper, ScrollView, View} from '~/components/components';
 import {DayWeatherSegment, MainInfo} from './components/components';
 import {useStore, useEffect} from '~/hooks/hooks';
 import {DataStatus} from '~/common/enums/data-status';
@@ -12,27 +13,32 @@ const Home: FC = observer(() => {
   useEffect(() => {
     getWeather()
   },[])
-  const renderItem = ({item}:{item: ParsedForecastDto}) => (
-    <DayWeatherSegment
-      data={item}
-      contentContainerStyle = {{marginTop: 10}}
+  const renderItem = useMemo(() => (
+    forecast.map(day => (
+      <DayWeatherSegment
+        data={day}
+        contentContainerStyle={styles.daySegment}
+        key={day.id}
       />
-  );
+    ))
+  ),[forecast])
+
   const isLoaded = DataStatus.FULFILLED == dataStatus
+
 
   return (
     <ScreenWrapper>
-      <View style={styles.wrapper}>
+      <ScrollView style={styles.wrapper}>
       {isLoaded && (
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          ListHeaderComponent={() => <MainInfo data={currentWeather}/>}
-          data={forecast}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
-        )}
-       </View>
+        <>
+          <MainInfo data={currentWeather}/>
+          <View style={styles.daysWrapper}>
+            {renderItem}
+          </View>
+
+        </>
+      )}
+       </ScrollView>
     </ScreenWrapper>
   );
 });

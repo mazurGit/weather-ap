@@ -35,14 +35,17 @@ const styles = StyleSheet.create({
   },
   title:{
     width: '33%',
+    ...FONT_STYLES.fontWeightRegular,
   },
   minTemp: {
     color: colors.textMinTemp,
+    ...FONT_STYLES.fontWeightRegular,
     textAlign: 'right',
     flex: 1,
   },
   maxTemp: {
     color: colors.textMaxTemp,
+    ...FONT_STYLES.fontWeightRegular,
     textAlign: 'right',
     flex: 1,
   },

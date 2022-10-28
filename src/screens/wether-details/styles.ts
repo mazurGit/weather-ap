@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   infoWrapper: {
     alignSelf: 'center',
     width: '99%',
+    marginTop: 30,
     paddingHorizontal: 10,
     paddingVertical: 10,
     borderWidth:1,

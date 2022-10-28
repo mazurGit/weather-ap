@@ -10,10 +10,14 @@ type Props = {
 }
 const HourTemperatureSegment:FC<Props> = ({data, contentContainerStyle}) => {
   const {time, iconUrl, temperature} = data;
+  const getHour = (time: Date) =>{
+    const hour = time.getHours()
+    return hour < 10 ? `0${hour}` : hour
+  }
 
   return (
     <View style={[styles.wrapper, contentContainerStyle]}>
-      <Text style={styles.text}>{time.getHours()}</Text>
+      <Text style={styles.text}>{getHour(time)}</Text>
       <Image source={{uri: iconUrl}} style={styles.icon}/>
       <Text style={styles.text}>{temperature}</Text>
     </View>

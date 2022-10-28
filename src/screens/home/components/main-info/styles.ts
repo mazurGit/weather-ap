@@ -1,19 +1,18 @@
 import {StyleSheet} from "react-native";
-
+import {FONT_STYLES} from "~/styles/styles";
 const styles = StyleSheet.create({
   wrapper: {
     alignSelf: 'center',
     alignItems: 'center',
-    height: 400,
   },
   mainText: {
+    ...FONT_STYLES.fontWeightBold,
     fontSize: 30,
-    fontWeight: '700',
     marginTop: 30,
   },
   secondaryText: {
+    ...FONT_STYLES.fontWeightMedium,
     fontSize: 20,
-    fontWeight: '500',
   },
   image: {
     width: 70,
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   hoursList: {
-    marginTop: 70,
+    marginTop: 30,
   },
 })
 
