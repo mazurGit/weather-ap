@@ -1,6 +1,6 @@
 type Condition = {
-  text: string,
-  icon: string,
-}
+  text: string;
+  icon: string;
+};
 
-export type {Condition};
+export type { Condition };

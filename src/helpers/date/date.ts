@@ -1,1 +1,1 @@
-export {checkDateEqualToday} from './check-date-equal-today';
+export { checkDateEqualToday } from "./check-date-equal-today";

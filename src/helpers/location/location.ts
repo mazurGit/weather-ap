@@ -1,1 +1,1 @@
-export {getCurrentCity} from './get-current-city';
+export { getCurrentCity } from "./get-current-city";

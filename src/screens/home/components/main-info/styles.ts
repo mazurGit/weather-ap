@@ -1,9 +1,9 @@
-import {StyleSheet} from "react-native";
-import {FONT_STYLES} from "~/styles/styles";
+import { StyleSheet } from "react-native";
+import { FONT_STYLES } from "~/styles/styles";
 const styles = StyleSheet.create({
   wrapper: {
-    alignSelf: 'center',
-    alignItems: 'center',
+    alignSelf: "center",
+    alignItems: "center",
   },
   mainText: {
     ...FONT_STYLES.fontWeightBold,
@@ -17,11 +17,11 @@ const styles = StyleSheet.create({
   image: {
     width: 70,
     height: 70,
-    resizeMode: 'contain',
+    resizeMode: "contain",
   },
   hoursList: {
     marginTop: 30,
   },
-})
+});
 
-export {styles};
+export { styles };

@@ -4,4 +4,4 @@ const getQueryString = (params: Record<string, unknown>): string => {
   return `${urlParams.toString()}`;
 };
 
-export {getQueryString};
+export { getQueryString };

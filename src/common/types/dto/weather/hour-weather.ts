@@ -1,9 +1,9 @@
-import {Condition} from './condition';
+import { Condition } from "./condition";
 
-type HourWeather ={
-  time: string,
-  condition: Condition,
-  temp_c: number,
-}
+type HourWeather = {
+  time: string;
+  condition: Condition;
+  temp_c: number;
+};
 
-export type {HourWeather};
+export type { HourWeather };

@@ -1,4 +1,4 @@
-import {HttpMethod, HttpContentType} from '~/common/enums/enums';
+import { HttpMethod, HttpContentType } from "~/common/enums/enums";
 
 type HttpOptions = {
   method?: HttpMethod;
@@ -7,4 +7,4 @@ type HttpOptions = {
   params?: Record<string, unknown>;
 };
 
-export type {HttpOptions};
+export type { HttpOptions };

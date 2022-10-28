@@ -1,8 +1,8 @@
-import {RootScreenName} from '~/common/enums/enums';
+import { RootScreenName } from "~/common/enums/enums";
 
 type RootNavigationParamList = {
   [RootScreenName.HOME]: undefined;
-  [RootScreenName.WEATHER_DETAILS]: {id: string};
+  [RootScreenName.WEATHER_DETAILS]: { id: string };
 };
 
-export type {RootNavigationParamList};
+export type { RootNavigationParamList };
