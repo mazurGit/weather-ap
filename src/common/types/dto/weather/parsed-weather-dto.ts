@@ -3,18 +3,18 @@ type ParsedHourWeather = {
   temperature: string;
   iconUrl: string;
   condition: string;
-}
+};
 
 type ParsedCurrentDto = {
   city: string;
   condition: string;
   iconUrl: string;
   temperature: string;
-  hours: ParsedHourWeather[],
-}
+  hours: ParsedHourWeather[];
+};
 
 type ParsedForecastDto = {
-  id: string,
+  id: string;
   sunRise: number;
   sunSet: number;
   date: Date;
@@ -28,6 +28,6 @@ type ParsedForecastDto = {
   iconUrl: string;
   hours: ParsedHourWeather[];
   avgTemp: string;
-}
+};
 
-export type{ParsedCurrentDto, ParsedForecastDto, ParsedHourWeather};
+export type { ParsedCurrentDto, ParsedForecastDto, ParsedHourWeather };

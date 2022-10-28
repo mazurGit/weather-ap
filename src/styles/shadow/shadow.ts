@@ -1,4 +1,3 @@
-
 const SHADOW_STYLE = {
   boxShadow: {
     shadowOffset: {
@@ -11,4 +10,4 @@ const SHADOW_STYLE = {
   },
 };
 
-export {SHADOW_STYLE};
+export { SHADOW_STYLE };

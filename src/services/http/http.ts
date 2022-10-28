@@ -1,13 +1,14 @@
-
-import {getQueryString} from '~/helpers/helpers';
-import {HttpOptions} from '~/common/types/types';
-import {HttpContentType, HttpMethod, HttpHeaders} from '~/common/enums/enums';
+import { getQueryString } from "~/helpers/helpers";
+import { HttpOptions } from "~/common/types/types";
+import { HttpContentType, HttpMethod, HttpHeaders } from "~/common/enums/enums";
 
 class HttpServices {
-  private apiKey: string = '5b4d1e50fee54d919e3111754222610';
+  private apiKey: string = "5b4d1e50fee54d919e3111754222610";
 
   private getUrl(url: string, params?: Record<string, unknown>): string {
-    return `${url}?key=${this.apiKey}${params ? `&${getQueryString(params)}` : ''}`;
+    return `${url}?key=${this.apiKey}${
+      params ? `&${getQueryString(params)}` : ""
+    }`;
   }
 
   private getHeaders() {
@@ -18,9 +19,9 @@ class HttpServices {
 
   async load<T = unknown>(
     url: string,
-    options: Partial<HttpOptions> = {},
+    options: Partial<HttpOptions> = {}
   ): Promise<T> {
-    const {method = HttpMethod.GET, payload = null, params} = options;
+    const { method = HttpMethod.GET, payload = null, params } = options;
 
     const headers = this.getHeaders();
     const completeUrl = `${this.getUrl(url, params)}`;
@@ -37,4 +38,4 @@ class HttpServices {
   }
 }
 
-export {HttpServices};
+export { HttpServices };

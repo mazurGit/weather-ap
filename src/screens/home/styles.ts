@@ -1,7 +1,7 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  daySegment:{
+  daySegment: {
     marginTop: 10,
   },
   wrapper: {
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
   daysWrapper: {
     marginTop: 30,
-  }
+  },
 });
 
-export {styles};
+export { styles };

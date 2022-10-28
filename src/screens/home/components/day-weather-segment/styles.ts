@@ -1,54 +1,54 @@
-import {StyleSheet} from "react-native";
+import { StyleSheet } from "react-native";
 import { colors } from "~/common/constants/constants";
-import {SHADOW_STYLE, FONT_STYLES} from "~/styles/styles";
+import { SHADOW_STYLE, FONT_STYLES } from "~/styles/styles";
 
 const styles = StyleSheet.create({
-  wrapper:{
+  wrapper: {
     paddingHorizontal: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    alignSelf: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    alignSelf: "center",
     borderRadius: 4,
     backgroundColor: colors.white,
     ...SHADOW_STYLE.boxShadow,
-    width: '99%',
+    width: "99%",
   },
   image: {
-    alignSelf: 'center',
+    alignSelf: "center",
     width: 40,
     height: 40,
-    resizeMode: 'contain',
+    resizeMode: "contain",
   },
-  temperatureWrapper:{
-    flexDirection: 'row',
-    width: '45%'
+  temperatureWrapper: {
+    flexDirection: "row",
+    width: "45%",
   },
-  bar:{
+  bar: {
     width: 40,
     height: 1,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginHorizontal: 5,
   },
-  text:{
+  text: {
     fontSize: 18,
   },
-  title:{
-    width: '33%',
+  title: {
+    width: "33%",
     ...FONT_STYLES.fontWeightRegular,
   },
   minTemp: {
     color: colors.textMinTemp,
     ...FONT_STYLES.fontWeightRegular,
-    textAlign: 'right',
+    textAlign: "right",
     flex: 1,
   },
   maxTemp: {
     color: colors.textMaxTemp,
     ...FONT_STYLES.fontWeightRegular,
-    textAlign: 'right',
+    textAlign: "right",
     flex: 1,
   },
-})
+});
 
-export {styles};
+export { styles };

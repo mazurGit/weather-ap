@@ -1,1 +1,1 @@
-export {getQueryString} from './get-query-to-string';
+export { getQueryString } from "./get-query-to-string";

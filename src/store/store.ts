@@ -1,10 +1,10 @@
-import {createContext} from "react";
-import {WeatherStore} from "./weather-store";
+import { createContext } from "react";
+import { WeatherStore } from "./weather-store";
 
 const store = {
-  weather: new WeatherStore (),
-}
+  weather: new WeatherStore(),
+};
 
 const StoreContext = createContext(store);
 
-export {store, StoreContext};
+export { store, StoreContext };

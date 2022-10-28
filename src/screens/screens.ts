@@ -1,2 +1,2 @@
-export {Home} from './home/home';
-export {WeatherDetails} from './wether-details/weather-details'
+export { Home } from "./home/home";
+export { WeatherDetails } from "./wether-details/weather-details";

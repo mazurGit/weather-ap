@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {colors} from '~/common/constants/colors';
+import { StyleSheet } from "react-native";
+import { colors } from "~/common/constants/colors";
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -8,4 +8,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {styles};
+export { styles };

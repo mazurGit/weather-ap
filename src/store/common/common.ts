@@ -1,1 +1,4 @@
-export {initialCurrentForecastDay, initialCurrentWeather} from './initial-state-values';
+export {
+  initialCurrentForecastDay,
+  initialCurrentWeather,
+} from "./initial-state-values";
