@@ -1,11 +1,10 @@
 import React, {FC} from 'react';
 import {observer} from "mobx-react-lite"
 import {useMemo} from 'react';
-import {ScreenWrapper, ScrollView, View} from '~/components/components';
+import {ScreenWrapper, ScrollView, View, Spinner} from '~/components/components';
 import {DayWeatherSegment, MainInfo} from './components/components';
 import {useStore, useEffect} from '~/hooks/hooks';
 import {DataStatus} from '~/common/enums/data-status';
-import {ParsedForecastDto} from '~/common/types/types';
 import {styles} from './styles';
 
 const Home: FC = observer(() => {
@@ -29,7 +28,7 @@ const Home: FC = observer(() => {
   return (
     <ScreenWrapper>
       <ScrollView style={styles.wrapper}>
-      {isLoaded && (
+      {isLoaded ? (
         <>
           <MainInfo data={currentWeather}/>
           <View style={styles.daysWrapper}>
@@ -37,7 +36,9 @@ const Home: FC = observer(() => {
           </View>
 
         </>
-      )}
+      ) :
+      <Spinner/>
+      }
        </ScrollView>
     </ScreenWrapper>
   );

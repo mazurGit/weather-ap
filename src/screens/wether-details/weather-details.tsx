@@ -1,14 +1,13 @@
 import React, {FC, Fragment} from 'react';
 import {observer} from 'mobx-react-lite';
 import {useRoute, useStore, useEffect, useMemo} from '~/hooks/hooks';
-import {View, ScreenWrapper, ScrollView, FlatList} from '~/components/components';
+import {View, ScreenWrapper, ScrollView, Spinner} from '~/components/components';
 import {MainInfo, WeatherParameter} from './components/components';
 import {styles} from './styles';
 import {RootNavigationParamList} from '~/common/types/types';
 import {RootScreenName} from '~/common/enums/navigation';
 import {RouteProp} from '@react-navigation/core';
 import {weatherInfo} from '~/common/constants/constants';
-import {KeyWeatherInfo} from '~/common/types/types';
 
 const WeatherDetails: FC = observer(() => {
   const {weather:{updateCurrentForecast, currentForecastDay}} = useStore()
@@ -33,13 +32,15 @@ const WeatherDetails: FC = observer(() => {
   return (
     <ScreenWrapper>
       <ScrollView style={styles.screenWrapper}>
-        { isDataReady &&
+        { isDataReady ?
           <>
             <MainInfo data={currentForecastDay}/>
             <View style={styles.infoWrapper}>
                 {renderItem}
             </View>
           </>
+          :
+          <Spinner/>
         }
       </ScrollView>
     </ScreenWrapper>
