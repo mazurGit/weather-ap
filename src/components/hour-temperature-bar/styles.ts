@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 import {colors} from '~/common/constants/colors';
-import {SHADOW_STYLE} from '~/styles/styles';
 
 const styles = StyleSheet.create({
   hoursList: {
