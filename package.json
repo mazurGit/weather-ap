@@ -7,8 +7,6 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "npm run lint:fs && npm run lint:type && npm run lint:js",
-    "lint:fix": "npm run lint:fs && npm run lint:type && npm run lint:js -- --fix",
     "prettier:check": "npx prettier --check \"src/**/*.{ts,tsx}\" --loglevel=warn",
     "prettier:fix": "npx prettier --write \"src/**/*.{ts,tsx}\" --loglevel=warn"
   },
