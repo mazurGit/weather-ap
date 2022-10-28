@@ -13,6 +13,7 @@ const WeatherDetails: FC = observer(() => {
   const {weather:{updateCurrentForecast, currentForecastDay}} = useStore()
   const {params:{id}} = useRoute<RouteProp<RootNavigationParamList, RootScreenName.WEATHER_DETAILS>>()
   useEffect(() =>{
+
     updateCurrentForecast(id)
   },[])
   const renderItem = useMemo(() => (
