@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   mainText: {
     ...FONT_STYLES.fontWeightBold,
     fontSize: 30,
+    marginTop: 20,
   },
   secondaryText: {
     ...FONT_STYLES.fontWeightMedium,
