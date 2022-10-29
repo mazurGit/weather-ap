@@ -9,6 +9,8 @@ const styles = StyleSheet.create({
   mainText: {
     ...FONT_STYLES.fontWeightBold,
     fontSize: 30,
+  },
+  avgTemp: {
     marginTop: 20,
   },
   secondaryText: {

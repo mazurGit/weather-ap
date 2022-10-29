@@ -23,7 +23,7 @@ const MainInfo: FC<Props> = ({ data, contentContainerStyle }) => {
     <View style={[styles.wrapper, contentContainerStyle]}>
       <Text style={styles.mainText}>{isTodayDate ? "Today" : dayName}</Text>
       <Text style={styles.secondaryText}>{day}</Text>
-      <Text style={styles.mainText}>{avgTemp}</Text>
+      <Text style={[styles.mainText, styles.avgTemp]}>{avgTemp}</Text>
       <Text>Average temperature</Text>
       <Text style={styles.secondaryText}>{condition}</Text>
       <Image source={{ uri: iconUrl }} style={styles.icon} />
