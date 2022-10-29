@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { RootNavigationParamList } from "~/common/types/types";
 import { RootScreenName } from "~/common/enums/navigation";
 import { Home, WeatherDetails } from "~/screens/screens";
-import { Text } from "react-native";
 import { colors } from "~/common/constants/colors";
 
 const NativeStack = createNativeStackNavigator<RootNavigationParamList>();
