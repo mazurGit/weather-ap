@@ -1,4 +1,3 @@
-import { Condition } from "./condition";
 import { ForecastDayDto } from "./forecast-day-dto";
 
 type WeatherDto = {

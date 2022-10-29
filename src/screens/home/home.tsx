@@ -31,7 +31,7 @@ const Home: FC = observer(() => {
     [forecast]
   );
 
-  const isLoaded = DataStatus.FULFILLED == dataStatus;
+  const isLoaded = DataStatus.FULFILLED === dataStatus;
 
   return (
     <ScreenWrapper>

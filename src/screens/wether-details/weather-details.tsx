@@ -26,7 +26,7 @@ const WeatherDetails: FC = observer(() => {
     >();
   useEffect(() => {
     updateCurrentForecast(id);
-  }, []);
+  }, [id]);
   const renderItem = useMemo(
     () =>
       weatherInfo.map(({ value, name }, iter) => (

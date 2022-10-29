@@ -1,13 +1,7 @@
 import React, { FC } from "react";
-import {
-  Image,
-  Text,
-  View,
-  FlatList,
-  HourTemperatureBar,
-} from "~/components/components";
+import { Image, Text, View, HourTemperatureBar } from "~/components/components";
 import { styles } from "./styles";
-import { ParsedHourWeather, ParsedCurrentDto } from "~/common/types/types";
+import { ParsedCurrentDto } from "~/common/types/types";
 
 type Props = {
   data: ParsedCurrentDto;
