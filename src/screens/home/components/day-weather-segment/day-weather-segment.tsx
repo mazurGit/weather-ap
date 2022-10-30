@@ -8,11 +8,10 @@ import {
 } from "~/components/components";
 import { StyleProp, ViewStyle } from "react-native";
 import { styles } from "./styles";
-import { colors } from "~/common/constants/constants";
+import { colors, dayNames } from "~/common/constants/constants";
 import { useNavigation } from "~/hooks/hooks";
 import { ParsedForecastDto, RootNavigationProps } from "~/common/types/types";
 import { RootScreenName } from "~/common/enums/navigation";
-import { dayNames } from "~/common/constants/constants";
 import { checkDateEqualToday } from "~/helpers/helpers";
 
 type Props = {

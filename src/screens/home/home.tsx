@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { observer } from "mobx-react-lite";
-import { useMemo } from "react";
 import {
   ScreenWrapper,
   ScrollView,
@@ -8,7 +7,7 @@ import {
   Spinner,
 } from "~/components/components";
 import { DayWeatherSegment, MainInfo } from "./components/components";
-import { useStore, useEffect } from "~/hooks/hooks";
+import { useStore, useEffect, useMemo } from "~/hooks/hooks";
 import { DataStatus } from "~/common/enums/data-status";
 import { styles } from "./styles";
 

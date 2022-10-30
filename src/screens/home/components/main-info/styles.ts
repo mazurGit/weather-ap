@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { FONT_STYLES } from "~/styles/styles";
+
 const styles = StyleSheet.create({
   wrapper: {
     alignSelf: "center",

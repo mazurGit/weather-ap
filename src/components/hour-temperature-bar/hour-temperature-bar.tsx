@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { StyleProp, ViewStyle } from "react-native";
-import { FlatList } from "react-native";
+import { StyleProp, ViewStyle, FlatList } from "react-native";
 import { HourTemperatureSegment } from "./components/components";
 import { styles } from "./styles";
 import { ParsedHourWeather } from "~/common/types/types";

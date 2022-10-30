@@ -1,4 +1,5 @@
 import React, { FC, Fragment } from "react";
+import { RouteProp } from "@react-navigation/core";
 import { observer } from "mobx-react-lite";
 import { useRoute, useStore, useEffect, useMemo } from "~/hooks/hooks";
 import {
@@ -11,7 +12,6 @@ import { MainInfo, WeatherParameter } from "./components/components";
 import { styles } from "./styles";
 import { RootNavigationParamList } from "~/common/types/types";
 import { RootScreenName } from "~/common/enums/navigation";
-import { RouteProp } from "@react-navigation/core";
 import { weatherInfo } from "~/common/constants/constants";
 
 const WeatherDetails: FC = observer(() => {
