@@ -2,7 +2,7 @@ import * as Location from "expo-location";
 
 const getCurrentCity = async () => {
   let { status } = await Location.requestForegroundPermissionsAsync();
-  if (status !== "granted") {
+  if (status !== Location.PermissionStatus.GRANTED) {
     // eslint-disable-next-line no-alert
     alert("Permission to access location was denied");
     return;
