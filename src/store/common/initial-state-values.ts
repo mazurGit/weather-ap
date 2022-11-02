@@ -2,9 +2,9 @@ import { ParsedCurrentDto, ParsedForecastDto } from "~/common/types/types";
 
 const initialCurrentWeather: ParsedCurrentDto = {
   city: "",
-  condition: "string",
-  iconUrl: "string",
-  temperature: "string",
+  condition: "",
+  iconUrl: "",
+  temperature: "",
   hours: [],
 };
 
