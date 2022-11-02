@@ -17,7 +17,7 @@ const getCurrentCity = async () => {
     longitude: location.coords.longitude,
   });
 
-  return place.city?.replace(/\W/gi, "");
+  return place.city?.replace(/'/g, "");
 };
 
 export { getCurrentCity };
